@@ -28,4 +28,8 @@ public class CommonJoinPointConfig {
 	public void beanWithinDAO() {
 	}
 
+	@Pointcut("@annotation(com.spring.aop.springaop.aspect.TrackTime)") // Looks for bean that contains in that package"
+	public void trackTimeAnnotation() {
+	}
+
 }
