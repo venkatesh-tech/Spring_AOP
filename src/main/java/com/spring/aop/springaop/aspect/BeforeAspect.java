@@ -20,7 +20,8 @@ public class BeforeAspect {
 //	@Before("execution(* com.spring.aop.springaop.business.*.*(..))") // works for business package return type is
 	// anything
 
-	@Before("execution(* com.spring.aop.springaop..*.*(..))") // works for all spring aop package //pointcut
+	@Before("com.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()") // works for all spring aop
+																							// package //pointcut
 	public void before(JoinPoint joinpoint) {
 		// What to do?
 		logger.info("check for user access"); // advice
