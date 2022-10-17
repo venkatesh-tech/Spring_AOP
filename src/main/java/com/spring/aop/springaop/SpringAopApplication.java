@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.spring.aop.springaop.business.*;
 
 @SpringBootApplication
+//@ComponentScan(basePackages = "{com.spring.aop.springaop.business,com.spring.aop.springaop.data}")
 public class SpringAopApplication implements CommandLineRunner {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
