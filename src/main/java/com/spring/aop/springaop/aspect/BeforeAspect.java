@@ -17,10 +17,15 @@ public class BeforeAspect {
 	// What kinds of method calls I would intercept
 	// execution(* PACKAGE.*.*(..))
 
-	@Before("execution(* com.spring.aop.springaop.business.*.*(..))")
+//	@Before("execution(* com.spring.aop.springaop.business.*.*(..))") // works for business package return type is
+	// anything
+
+	@Before("execution(* com.spring.aop.springaop..*.*(..))") // works for all spring aop package //pointcut
 	public void before(JoinPoint joinpoint) {
 		// What to do?
+		logger.info("check for user access"); // advice
 		logger.info("Intercepted Methd Calls - {}", joinpoint);
+		logger.info("access authorized");
 	}
 
 }
